@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=x, initial-scale=1.0">
 	<title>Movie App</title>
 
-	<link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <livewire:styles>
 </head>
 <body class="font-sans bg-gray-900 text-white">
 	<nav class="border-b border-gray-800">
@@ -27,13 +28,7 @@
 			</li>
 		</ul>
 		<div class="flex flex-col md:flex-row items-center">
-			<div class="relative">
-				<input type="text" class="bg-gray-800 rounded-full w-64 px-4 pl-8 py-1 focus:outline-none focus:shadow-outline" placeholder="Search">
-				<div class="abosolute top-0">
-
-                </div>
-
-            </div>
+            <livewire:search-dropdown>
             <div class="md:ml-4 mt-3 md:mt-0">
                 <a href="#">
                     <img src="https://raw.githubusercontent.com/drehimself/laravel-movies-example/master/public/img/avatar.jpg" alt="" class="rounded-full w-8 h-8 ">
@@ -42,7 +37,8 @@
 		</div>
 	</div>
 	</nav>
-	@yield('content')
+    @yield('content')
+    <livewire:scripts>
 </body>
 </html>
 
